@@ -44,6 +44,7 @@ app.get('/', (req,res)=>{
 app.post('/userProfile', (req,res)=>{
     var username = req.body.uname;
     var password = req.body.pwd;
+    var deviceType = req.body.device;
     if(username == validUsername && password == validPassword){
         session1 = req.session;
         session1.userid = username;
